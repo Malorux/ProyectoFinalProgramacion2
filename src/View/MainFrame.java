@@ -17,7 +17,6 @@ public class MainFrame extends javax.swing.JFrame {
 
         jFrame1 = new javax.swing.JFrame();
         jToolBar1 = new javax.swing.JToolBar();
-        jComboBox3 = new javax.swing.JComboBox<>();
         jDesktopPane2 = new javax.swing.JDesktopPane();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
@@ -54,9 +53,6 @@ public class MainFrame extends javax.swing.JFrame {
         setTitle("PucheNET_IDE");
 
         jToolBar1.setRollover(true);
-
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jToolBar1.add(jComboBox3);
 
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
@@ -137,6 +133,11 @@ public class MainFrame extends javax.swing.JFrame {
         jMenu1.add(jMenuItem1);
 
         jMenuItem3.setText("Open Project");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem3);
 
         jMenuItem4.setText("Save");
@@ -195,20 +196,27 @@ public class MainFrame extends javax.swing.JFrame {
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         try {
         
-            Runtime.getRuntime().exec("cmd /c start cmd.exe /K \"cd C:\\Users\\user\\Documents\\NetBeansProjects\\REPOSITORIOS\\ProyectoFinalProgramacion2\\src\\Main && javac Main.java"); 
-            Runtime.getRuntime().exec("cmd /c start cmd.exe /K \"cd C:\\Users\\user\\Documents\\NetBeansProjects\\REPOSITORIOS\\ProyectoFinalProgramacion2\\src\\Main && java Main"); 
+            Runtime.getRuntime().exec("cmd /c start cmd.exe /K \"cd C:\\Users\\Mauro\\Desktop\\Universidad\\Practica de Programacion\\Cosas\\src && javac lol.java && exit");
+            
             
         } catch (IOException ex) {
             Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        try {
+            Runtime.getRuntime().exec("cmd /c start cmd.exe /K \"cd C:\\Users\\Mauro\\Desktop\\Universidad\\Practica de Programacion\\Cosas\\src && java lol && exit");
+        } catch (IOException ex) {
+            Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JDesktopPane jDesktopPane2;
     private javax.swing.JDesktopPane jDesktopPane3;
     private javax.swing.JFrame jFrame1;
